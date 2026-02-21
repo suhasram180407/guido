@@ -1,0 +1,15 @@
+{
+  "data_audit": {
+    "feature_sample_ratio": "0.0",
+    "overfitting_risk": "MODERATE or LOW",
+    "generalization_comment": "Model trained on zero samples with no features; predictions are constant, so generalization is impossible."
+  },
+  "model_performance_review": {
+    "bias_risk": "High; training and validation sample sizes are zero, and the model uses no features, leading to extreme risk of bias.",
+    "performance_quality": "Poor; AUROC 0.5 and AUPRC 0.25 indicate no predictive power."
+  },
+  "biomarker_analysis": [],
+  "flagged_unstable_features": [],
+  "high_confidence_targets": [],
+  "overall_system_verdict": "The model lacks biological evidence, predictive performance, and generalizability; it should not be deployed."
+}

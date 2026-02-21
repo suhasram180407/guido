@@ -1,0 +1,40 @@
+-.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+*.egg
+*.whl
+
+# Data (too large for git)
+data/raw/
+data/processed/
+
+# Model artifacts
+models_artifacts/
+
+# Results (regeneratable)
+results/pubmed_cache/
+
+# MLflow
+mlruns/
+*.db
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db

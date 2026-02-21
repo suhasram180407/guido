@@ -1,0 +1,53 @@
+version: "3.9"
+
+services:
+  # ── Multi-omics pipeline API ────────────────────────────────────────────────
+  api:
+    build:
+      context: .
+      target: runtime
+    container_name: multiomics_api
+    ports:
+      - "8000:8000"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - ENTREZ_EMAIL=${ENTREZ_EMAIL}
+      - ENTREZ_API_KEY=${ENTREZ_API_KEY}
+      - TCGA_PROJECT_ID=${TCGA_PROJECT_ID:-TCGA-BRCA}
+      - GROQ_MODEL=${GROQ_MODEL:-llama3-70b-8192}
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+    volumes:
+      - pipeline_data:/app/data
+      - pipeline_models:/app/models_artifacts
+      - pipeline_results:/app/results
+      - mlflow_data:/app/mlruns
+    depends_on:
+      - mlflow
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── MLflow tracking server ──────────────────────────────────────────────────
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.10.0
+    container_name: mlflow_server
+    ports:
+      - "5000:5000"
+    command: >
+      mlflow server
+        --host 0.0.0.0
+        --port 5000
+        --backend-store-uri sqlite:///mlflow.db
+        --default-artifact-root /mlflow/artifacts
+    volumes:
+      - mlflow_data:/mlflow
+    restart: unless-stopped
+
+volumes:
+  pipeline_data:
+  pipeline_models:
+  pipeline_results:
+  mlflow_data:

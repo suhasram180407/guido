@@ -1,0 +1,4 @@
+{
+  "enet__alpha": 0.001,
+  "enet__l1_ratio": 0.2
+}

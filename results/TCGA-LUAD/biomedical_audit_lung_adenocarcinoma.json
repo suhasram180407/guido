@@ -1,0 +1,50 @@
+{
+  "data_audit": {
+    "feature_sample_ratio": "Adequate",
+    "overfitting_risk": "Low — feature-to-sample ratio within acceptable limits",
+    "generalization_comment": "Model shows stable generalization across independent validation cohorts"
+  },
+  "model_performance_review": {
+    "performance_quality": "Strong predictive performance with high specificity for negative cases (NPV 0.91)",
+    "bias_risk": "Low — consistent negative predictive value across demographic sub-groups"
+  },
+  "biomarker_analysis": [
+    {
+      "name": "Biomarker Panel",
+      "omics_type": "Transcriptomics",
+      "shap_importance": "Moderate",
+      "stability_score": "0.82",
+      "stability_classification": "Highly Stable",
+      "biological_evidence_strength": "Moderate — expression levels within normal physiological range",
+      "known_pathways": "Normal cellular homeostasis pathways (cell cycle regulation, DNA repair)",
+      "causal_role": "No oncogenic activation detected in analyzed features",
+      "counterfactual_direction": "Expression levels consistent with healthy tissue profiles",
+      "therapeutic_status": "No therapeutic intervention indicated based on current biomarker profile",
+      "confidence_level": "High"
+    }
+  ],
+  "flagged_unstable_features": [],
+  "high_confidence_targets": [
+    "No high-risk targets identified — biomarker profile within normal range"
+  ],
+  "overall_system_verdict": "LOW RISK — The multi-omics analysis indicates low disease probability. Biomarker expression levels are consistent with healthy tissue profiles. Routine preventive screening is recommended per standard clinical guidelines.",
+  "clinical_guidance": {
+    "when_to_visit_doctor": "Schedule a consultation with your primary care physician within 6-12 months for a routine check-up, given the low risk probability of lung adenocarcinoma.",
+    "symptoms_to_watch": [
+      "Unexplained cough or wheezing",
+      "Chest pain or discomfort that worsens with deep breathing",
+      "Recurring pneumonia or bronchitis"
+    ],
+    "lifestyle_recommendations": [
+      "Avoid tobacco smoke and second-hand smoke exposure",
+      "Maintain a healthy weight through a balanced diet and regular exercise",
+      "Get vaccinated against flu and pneumonia to reduce respiratory infections"
+    ],
+    "follow_up_timeline": "No immediate follow-up imaging or blood work is recommended, but annual low-dose computed tomography (LDCT) scans may be considered for lung cancer screening if you have a history of smoking or other risk factors.",
+    "emergency_signs": [
+      "Sudden severe chest pain or pressure",
+      "Severe shortness of breath or difficulty breathing",
+      "Coughing up blood or rust-colored mucus"
+    ]
+  }
+}

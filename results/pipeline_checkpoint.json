@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-02-20T20:30:00Z",
+  "status": "paused",
+  "projects": {
+    "TCGA-LUAD": {
+      "status": "raw_downloaded_partial",
+      "raw_matrix": "data/raw/TCGA-LUAD/TCGA-LUAD_rnaseq_raw.parquet",
+      "clinical": "data/raw/TCGA-LUAD/TCGA-LUAD_clinical.parquet",
+      "next_step": "python run_pipeline.py --mode train --real-data --project TCGA-LUAD"
+    },
+    "TCGA-PRAD": {
+      "status": "downloads_incomplete",
+      "next_step": "python check_and_redownload.py --projects TCGA-PRAD --retries 20 --max-attempts 20 --timeout 300"
+    }
+  },
+  "notes": "Training paused by user. Resume by running the indicated next_step commands. Check network stability before re-downloading."
+}

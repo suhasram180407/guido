@@ -1,0 +1,8 @@
+{
+  "TCGA-LUAD": {
+    "error": "download_file() got an unexpected keyword argument 'max_retries'"
+  },
+  "TCGA-PRAD": {
+    "error": "download_file() got an unexpected keyword argument 'max_retries'"
+  }
+}

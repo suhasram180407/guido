@@ -1,0 +1,11 @@
+{
+  "auroc": 0.5,
+  "auprc": 0.25,
+  "f1": 0.0,
+  "accuracy": 0.75,
+  "auroc_95ci": [
+    0.5,
+    0.5
+  ],
+  "split": "test"
+}

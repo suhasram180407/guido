@@ -1,0 +1,15 @@
+{
+  "data_audit": {
+    "feature_sample_ratio": "0.0",
+    "overfitting_risk": "MODERATE or LOW",
+    "generalization_comment": "Limited generalization due to small validation set and no external cohort."
+  },
+  "model_performance_review": {
+    "bias_risk": "High bias risk due to imbalanced class distribution (0 positives, 1 negative) and extremely small sample size (8 training samples).",
+    "performance_quality": "Poor predictive performance: AUROC 0.5, AUPRC 0.25, accuracy 0.75, F1 0.0."
+  },
+  "biomarker_analysis": [],
+  "flagged_unstable_features": [],
+  "high_confidence_targets": [],
+  "overall_system_verdict": "The model demonstrates inadequate performance, high bias risk, and insufficient biological evidence for any biomarkers. It is not suitable for clinical deployment."
+}

@@ -1,0 +1,27 @@
+{
+  "sample_id": "TCGA-05-4245",
+  "predicted_probability": 0.2479039143071174,
+  "predicted_percent": 24.8,
+  "risk_category": "Moderate",
+  "interpretation": "Estimated chance: 24.8% \u2014 categorized as Moderate risk.",
+  "recommended_next_steps": [
+    "Schedule follow-up with your primary care provider to review clinical context and consider diagnostic testing.",
+    "If clinically indicated, referral to a specialist (e.g., oncologist) for diagnostic workup may be appropriate."
+  ],
+  "suggested_specialists": [
+    "Primary care physician",
+    "Medical oncologist"
+  ],
+  "resources": {
+    "cancer_information": "https://www.cancer.gov/",
+    "patient_support": "https://www.cancer.org/",
+    "clinical_trials": "https://clinicaltrials.gov/"
+  },
+  "disclaimer": "This report is informational only and not medical advice. Discuss results with a licensed healthcare professional for diagnosis and treatment.",
+  "prevention_and_support": [
+    "Avoid tobacco and excessive alcohol consumption.",
+    "Follow age-appropriate cancer screening guidelines.",
+    "Discuss vaccination options with your provider (e.g., HPV vaccine where applicable)."
+  ],
+  "note_on_cure": "Treatment and outcomes depend on diagnosis, disease stage, and individual health. Only a licensed clinician can recommend appropriate therapy; this report does not claim cures."
+}
